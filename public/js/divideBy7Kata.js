@@ -7,6 +7,7 @@ the number of steps to get the result.
 
 Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
 */
+
 let stepCounter = 0;
 
 function seven(m) {
@@ -24,5 +25,11 @@ function seven(m) {
     }
 
 }
-//document.getElementById('textbox_id').value
-console.log(seven(371))
+
+
+
+let m = document.getElementById('numberField')
+m.addEventListener("click", function(){ console.log(seven(m.value)) });
+//console.log(m)
+//console.log(seven(371))
+//console.log(seven(m))
