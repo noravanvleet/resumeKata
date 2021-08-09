@@ -25,7 +25,7 @@ function seven(m) {
     }
 
 }
-
+/*
 const seven = (e) => {
     let kataField = e.target
     const options = {
@@ -46,6 +46,8 @@ axios.get(url, m).then(res => {
 })
 m.onclick = function(){ console.log(seven(m.value)) }
 m.addEventListener("click", function(){ console.log(seven(m.value)) });
+
+ */
 //console.log(m)
 //console.log(seven(371))
 //console.log(seven(m))
