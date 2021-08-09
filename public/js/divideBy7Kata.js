@@ -26,9 +26,25 @@ function seven(m) {
 
 }
 
+const seven = (e) => {
+    let kataField = e.target
+    const options = {
+
+    }
+    axios.get()...
+    .then(res => {
+        put answer somewhere
+        answerField.innerHTML = answer
+    })
+
+}
 
 
 let m = document.getElementById('numberField')
+axios.get(url, m).then(res => {
+    document.getElementById("answer").innerHTML(res.json.answer)
+})
+m.onclick = function(){ console.log(seven(m.value)) }
 m.addEventListener("click", function(){ console.log(seven(m.value)) });
 //console.log(m)
 //console.log(seven(371))
