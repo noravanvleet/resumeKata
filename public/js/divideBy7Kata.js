@@ -7,7 +7,7 @@ the number of steps to get the result.
 
 Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
 */
-let axios = require("axios")
+const axios = require("axios")
 let stepCounter = 0
 
 function seven(m) {
@@ -27,15 +27,16 @@ function seven(m) {
 }
 
 const divideBySeven = (e) => {
-    let kataField = e.target
+    let kataField = e.target.data
     const options = {
         method: 'GET',
-        url: 'https://resumekatas.herokuapp.com/seven',
-        params: {input: 371}
+        url: 'https://resumekatas.herokuapp.com/divideBySeven',
+        //params: {input: 371, answer: [35,1]}
     };
 
     axios.request(options).then(function (response) {
-        document.getElementById("answer").innerHTML(res.json.answer)
+        //let n = document.getElementById("answer").innerHTML(res.json.answer)
+       // console.log(seven(n))
     }).catch(function (error) {
         console.error(error);
     });
