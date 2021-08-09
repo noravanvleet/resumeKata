@@ -8,10 +8,10 @@ the number of steps to get the result.
 Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
 */
 let axios = require("axios")
-let stepCounter = 0;
+let stepCounter = 0
 
 function seven(m) {
-    let subtractNumber = 0;
+    let subtractNumber = 0
     m = m.toString()
     let numDigits = m.length
     if(numDigits > 2){
@@ -19,7 +19,7 @@ function seven(m) {
         m = m.slice(0, numDigits-1)
         m = m - 2*subtractNumber
         stepCounter++
-        return [m, stepCounter];
+        return [m, stepCounter]
     } else {
         return [m, stepCounter]
     }
@@ -35,7 +35,7 @@ const divideBySeven = (e) => {
     };
 
     axios.request(options).then(function (response) {
-        console.log(document.getElementById("answer").innerHTML(res.json.answer))
+        document.getElementById("answer").innerHTML(res.json.answer)
     }).catch(function (error) {
         console.error(error);
     });
