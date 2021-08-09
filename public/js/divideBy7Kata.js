@@ -12,6 +12,7 @@ let stepCounter = 0
 
 function seven(m) {
     let subtractNumber = 0
+
     m = m.toString()
     let numDigits = m.length
     if(numDigits > 2){
@@ -41,4 +42,7 @@ const divideBySeven = (e) => {
         console.error(error);
     });
 
+}
+module.exports = {
+    seven: seven
 }
