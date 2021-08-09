@@ -7,11 +7,11 @@ the number of steps to get the result.
 
 Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
 */
-
-let stepCounter = 0;
+const axios = require("axios")
+let stepCounter = 0
 
 function seven(m) {
-    let subtractNumber = 0;
+    let subtractNumber = 0
     m = m.toString()
     let numDigits = m.length
     if(numDigits > 2){
@@ -19,35 +19,26 @@ function seven(m) {
         m = m.slice(0, numDigits-1)
         m = m - 2*subtractNumber
         stepCounter++
-        return [m, stepCounter];
+        return [m, stepCounter]
     } else {
         return [m, stepCounter]
     }
 
 }
-/*
-const seven = (e) => {
-    let kataField = e.target
-    const options = {
 
-    }
-    axios.get()...
-    .then(res => {
-        put answer somewhere
-        answerField.innerHTML = answer
-    })
+const divideBySeven = (e) => {
+    let kataField = e.target.data
+    const options = {
+        method: 'GET',
+        url: 'https://resumekatas.herokuapp.com/divideBySeven',
+        //params: {input: 371, answer: [35,1]}
+    };
+
+    axios.request(options).then(function (response) {
+        //let n = document.getElementById("answer").innerHTML(res.json.answer)
+       // console.log(seven(n))
+    }).catch(function (error) {
+        console.error(error);
+    });
 
 }
-
-
-let m = document.getElementById('numberField')
-axios.get(url, m).then(res => {
-    document.getElementById("answer").innerHTML(res.json.answer)
-})
-m.onclick = function(){ console.log(seven(m.value)) }
-m.addEventListener("click", function(){ console.log(seven(m.value)) });
-
- */
-//console.log(m)
-//console.log(seven(371))
-//console.log(seven(m))

@@ -1,4 +1,5 @@
 const {seven} = require("../public/js/divideBy7Kata")
+
 const fs = require('fs')
 let path = require('path')
 const testDataFile = path.resolve(__dirname, './data/testData.json')
