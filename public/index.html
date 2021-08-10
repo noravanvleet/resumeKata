@@ -35,11 +35,14 @@
            </h2>
            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                <div class="accordion-body">
-                 The goal of this kata is to see if a number is divisible by seven.  A full description of how this must be determined is located at https://www.codewars.com/kata/55e6f5e58f7817808e00002e/javascript
+                 The goal of this kata is to see if a number is divisible by seven.
+                   <br> This operation is done by removing the last digit of a multi-digit number and subtracting it from the first two digits.
+                   <br> This is performed until there are two digits.  Once there are two digits left we know that if the two digit number is divisible by seven so is the original input.
+                   <br> A full description of how this must be determined is located at https://www.codewars.com/kata/55e6f5e58f7817808e00002e/javascript
                        <div class="form-group">
                            <label for="numberField">Please Insert A Three Digit Number:</label>
                            <input type="number" class="form-control" id="numberField" >
-                           <button id="submitNumber" onclick="handleSevenKata()">Submit</button>
+                           <button type="button" class="btn btn-primary btn-lg" id="submitNumber" onclick="handleSevenKata()">Submit</button>
                            <p id="outputForSeven"></p>
                        </div>
 
