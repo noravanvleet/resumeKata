@@ -12,15 +12,14 @@ let stepCounter = 0
 
 function seven(m) {
     let subtractNumber = 0
-
     m = m.toString()
     let numDigits = m.length
     if(numDigits > 2){
         subtractNumber = m[numDigits-1]
         m = m.slice(0, numDigits-1)
-        m = m - 2*subtractNumber
+        m = m - (2*subtractNumber)
         stepCounter++
-        return [m, stepCounter]
+        return seven(m, stepCounter)
     } else {
         return [m, stepCounter]
     }
@@ -32,12 +31,9 @@ const divideBySeven = (e) => {
     const options = {
         method: 'GET',
         url: 'https://resumekatas.herokuapp.com/divideBySeven',
-        //params: {input: 371, answer: [35,1]}
     };
 
     axios.request(options).then(function (response) {
-        //let n = document.getElementById("answer").innerHTML(res.json.answer)
-       // console.log(seven(n))
     }).catch(function (error) {
         console.error(error);
     });
