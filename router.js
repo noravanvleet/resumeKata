@@ -10,17 +10,7 @@ async function buildRouter() {
     router.get('/divideBySeven', (req, res) => {
         let input = req.query.input
         if(input) {
-            let result = seven(input)
-            res.status(200).json({"result" : result})
-        } else {
-            res.status(400).json({error:"Please send input"})
-        }
-    })
-
-    router.get('/divideByTwo', (req, res) => {
-        let input = req.query.input
-        if(input) {
-            let result = seven(input)
+            let result = seven(input, 0)
             res.status(200).json({"result" : result})
         } else {
             res.status(400).json({error:"Please send input"})
