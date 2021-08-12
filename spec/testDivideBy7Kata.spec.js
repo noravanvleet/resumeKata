@@ -1,5 +1,4 @@
 const { seven } = require("../public/js/divideBy7Kata")
-//const jest = require("jest")
 const fs = require('fs')
 let path = require('path')
 const testDataFile = path.resolve(__dirname, './data/testData.json')
@@ -26,11 +25,8 @@ describe ("division by 7 javascript", () => {
     })
 })
 describe ("html", () => {
-    it ("should only accept numbers as input", () =>{
-      
-    })
     it ("should display a print out of the calculation", () =>{
-
+    let result =
     })
     it ("Should display an error if they dont input anything", () =>{
 
