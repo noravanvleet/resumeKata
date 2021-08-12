@@ -8,9 +8,8 @@ the number of steps to get the result.
 Return on the stack number-of-steps, last-number-m-with-at-most-2-digits
 */
 const axios = require("axios")
-let stepCounter = 0
 
-function seven(m) {
+function seven(m, stepCounter) {
     let subtractNumber = 0
     m = m.toString()
     let numDigits = m.length
