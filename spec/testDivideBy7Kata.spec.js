@@ -5,7 +5,7 @@ const testDataFile = path.resolve(__dirname, './data/testData.json')
 let testData = fs.readFileSync(testDataFile)
 let projectObject = JSON.parse(testData)
 
-describe ("division by 7 javascript", () => {
+describe ("seven(m, stepCounter)", () => {
     it ("should return an array with the number left after passes and the number of passes", () =>{
         let result = seven(378, 0)
         expect(result[0]).toEqual("21")
@@ -23,16 +23,10 @@ describe ("division by 7 javascript", () => {
         let result = seven(18, 0)
         expect(result).toEqual(["18",0])
     })
-})
-describe ("html", () => {
-    it ("should display a print out of the calculation", () =>{
-  //  let result = document.getElementById()
+    it ("Should return the same number if it is two or less digits", () =>{
+        let result = seven(7, 0)
+        expect(result).toEqual(["7",0])
     })
-    it ("Should display an error if they dont input anything", () =>{
 
-    })
-    it ("Should display an error if they do not input a number", () =>{
-
-    })
 })
 

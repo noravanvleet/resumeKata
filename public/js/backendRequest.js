@@ -1,6 +1,6 @@
 function handleSevenKata(){
     let input = document.getElementById("numberField").value
-    makeRequest("divideBySeven", input, "outputForSeven")
+    makeRequest("divideBySeven", input, "outputForSeven", "seven")
 }
 
 /*function handleCountCars(){
@@ -9,7 +9,8 @@ function handleSevenKata(){
     makeRequest("divideBySeven", input, "outputForSeven")
 }*/
 
-function makeRequest(path, input, elementId) {
+function makeRequest(path, input, elementId, kata) {
+    let strDescription = ""
     const options = {
         method: 'GET',
         url: `http://localhost:4000/${path}`,
@@ -18,7 +19,10 @@ function makeRequest(path, input, elementId) {
     };
 
     axios.request(options).then(function (response) {
-        document.getElementById(elementId).innerHTML = `<br>Result: [${response.data.result}]`
+        if(kata == "seven"){
+            strDescription = `The function completed ${response.data.result[1]} pass(es) and resulted in the number ${response.data.result[0]}.<br>${input} is divisible by 7 if and only if ${response.data.result[0]} is divisible by seven.`
+        }
+            document.getElementById(elementId).innerHTML = `<br>${strDescription}<br>Function Result: [${response.data.result}]`
     }).catch(function (error) {
         console.error(error);
     });
