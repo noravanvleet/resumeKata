@@ -22,6 +22,11 @@ describe ("seven(m, stepCounter)", () => {
         let result = seven(7, 0)
         expect(result).toEqual(["7",0])
     })
-
+    it("should pass these basic number tests", () => {
+        expect(seven(1021, 0)).toEqual(["10", 2])
+        expect(seven(1603, 0)).toEqual(["7", 2])
+        expect(seven(371, 0)).toEqual(["35", 1])
+        expect(seven(483, 0)).toEqual(["42", 1])
+    })
 })
 

@@ -5,27 +5,9 @@
 const axios = require("axios")
 
 function reverse(stringToReverse) {
-    let reversedWord = ""
-    let returnString = ""
-    let returnArray = stringToReverse.split(" ")
-    for(let i = 0; i < returnArray.length; i++){
-        reversedWord = reverseWord(returnArray[i])
-        if(i == 0){
-            returnString = reversedWord
-        } else{
-            returnString = `${returnString} ${reversedWord}`
-        }
-    }
-    return returnString
-}
-
-function reverseWord(word) {
-    let returnStr = ""
-    let tailIndex = word.length -1
-    for(let i = tailIndex; i > -1; i--){
-        returnStr = returnStr.concat(word[i])
-    }
-    return returnStr
+    return stringToReverse.split(" ").map(el => {
+        return el.split("").reverse().join("")
+    }).join(" ")
 }
 
 const reverseString = (e) => {
@@ -42,7 +24,6 @@ const reverseString = (e) => {
 
 }
 module.exports = {
-    reverse: reverse,
-    reverseWord: reverseWord
+    reverse: reverse
 
 }
