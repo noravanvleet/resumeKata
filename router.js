@@ -1,6 +1,7 @@
 const { Router } = require('express')
 
 const { seven } = require("./public/js/divideBy7Kata")
+const { reverse } = require("./public/js/reverseStringKata")
 
 async function buildRouter() {
     let router = new Router()
@@ -16,7 +17,15 @@ async function buildRouter() {
             res.status(400).json({error:"Please send input"})
         }
     })
-
+    router.get('/reverseString', (req, res) => {
+        let input = req.query.input
+        if(input) {
+            let result = reverse()
+            res.status(200).json({"result" : result})
+        } else {
+            res.status(400).json({error:"Please send input"})
+        }
+    })
     return router
 }
 

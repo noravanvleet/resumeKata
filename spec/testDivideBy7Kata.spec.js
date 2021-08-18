@@ -1,9 +1,4 @@
 const { seven } = require("../public/js/divideBy7Kata")
-const fs = require('fs')
-let path = require('path')
-const testDataFile = path.resolve(__dirname, './data/testData.json')
-let testData = fs.readFileSync(testDataFile)
-let projectObject = JSON.parse(testData)
 
 describe ("seven(m, stepCounter)", () => {
     it ("should return an array with the number left after passes and the number of passes", () =>{
