@@ -5,8 +5,12 @@ function handleSevenKata(){
 
 function handleReverseKata(){
     let input = document.getElementById("stringInput").value
-    console.log(input)
     makeRequest("reverseString", input, "outputForReverse", "reverse")
+}
+
+function handleWatermelonKata(){
+    let input = document.getElementById("watermelonInput").value
+    makeRequest("watermelon", input, "outputForWatermelon", "watermelon")
 }
 
 function makeRequest(path, input, elementId, kata) {
