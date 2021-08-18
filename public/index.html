@@ -69,6 +69,26 @@
            </div>
        </div>
    </div>
+       <div class="accordion-item">
+           <h2 class="accordion-header" id="headingFour">
+               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                   WatermelonKata
+               </button>
+           </h2>
+           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+               <div class="accordion-body">
+                   Given an integral number of watermelons w from 1-100 check whether Pete and Billy can divide the
+                   melons so that each of them gets an even amount.
+                   <br><br>
+                   <div class="form-group">
+                       <label for="watermelonInput">Please Insert A Number In Range Of [1-100]:</label>
+                       <input type="number" class="form-control" id="watermelonInput" min="1" max="100"> <br>
+                       <button type="button" class="btn btn-primary" id="submitWatermelonNumber" onclick="handleWatermelonKata()">Submit</button>
+                       <p id="outputForWatermelon"></p>
+                   </div>
+               </div>
+           </div>
+       </div>
    <script src="js/backendRequest.js"></script>
 </body>
 </html>
