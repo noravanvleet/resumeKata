@@ -1,12 +1,12 @@
-const { reverse, reverseWord } = require("../public/js/reverseStringKata")
-
+const { reverse } = require("../public/js/reverseStringKata")
+// handle each possible
 
 describe ("reverse()", () => {
 
    it("should keep the same number of spaces", () => {
-       let result = reverse("ab cd")
+       let result = reverse("leggo my eggo")
        let resultArray = result.split(" ")
-      expect(resultArray.length).toEqual(2)
+      expect(resultArray.length).toEqual(3)
    })
 
     it("should reverse each word individually", () => {
@@ -21,19 +21,24 @@ describe ("reverse()", () => {
         expect(resultArray[1]).toEqual("my")
         expect(resultArray[2]).toEqual("eggo")
     })
-
-})
-
-describe ("reverseWord()", () => {
-
     it("should return the reverse of the word", () => {
-        let result = reverseWord("popcorn")
+        let result = reverse("popcorn")
         expect(result).toEqual("nrocpop")
     })
 
     it("should return an empty string if an empty string is passed in", () => {
-        let result = reverseWord("")
+        let result = reverse("")
         expect(result).toEqual("")
     })
-
+        it("should pass these basic string tests", () => {
+            expect(reverse("The quick brown fox jumps over the lazy dog."))
+                .toEqual("ehT kciuq nworb xof spmuj revo eht yzal .god")
+            expect(reverse("apple"))
+                .toEqual("elppa")
+            expect(reverse("a b c d"))
+                .toEqual("a b c d")
+            expect(reverse('double  spaced  words'))
+                .toEqual("elbuod  decaps  sdrow")
+        })
 })
+

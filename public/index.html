@@ -53,12 +53,18 @@
        <div class="accordion-item">
            <h2 class="accordion-header" id="headingThree">
                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                   Kata 2
+                   Reverse String Kata
                </button>
            </h2>
            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                <div class="accordion-body">
-                   Kata #2 Placeholder
+                   The goal of this kata is to complete a function that accepts a string parameter, and reverses each
+                   word in the string.<br>All spaces in the string should be retained.<br><br>
+                   <div class="form-group">
+                       <label for="stringInput">Please Insert A String (word or sentence):</label>
+                       <input type="text" class="form-control" id="stringInput" > <br>
+                       <button type="button" class="btn btn-primary" id="submitString" onclick="handleReverseKata()">Submit</button>
+                       <p id="outputForReverse"></p>
                </div>
            </div>
        </div>

@@ -19,8 +19,9 @@ async function buildRouter() {
     })
     router.get('/reverseString', (req, res) => {
         let input = req.query.input
+        console.dir(req.query)
         if(input) {
-            let result = reverse()
+            let result = reverse(input)
             res.status(200).json({"result" : result})
         } else {
             res.status(400).json({error:"Please send input"})
